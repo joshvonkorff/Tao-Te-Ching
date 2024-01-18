@@ -9,7 +9,7 @@ The idea of a vector database is that it stores embedding vectors for different 
 
 The translation used for the Tao Te Ching belongs to Wikisources:
 
-http://www.beatrice.com/TAO.txt
+https://en.wikisource.org/wiki/Translation:Tao_Te_Ching
 
 Then, the notebook uses OpenAI to answer the user's question, selecting the most relevant Tao Te Ching passage as context.  In this case, passage #27 is selected.
 

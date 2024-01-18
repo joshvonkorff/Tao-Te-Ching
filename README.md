@@ -37,7 +37,7 @@ The passage from Hogan's translation is as follows:
 >   and ignores nobody.
 >   They uses their resources wisely,
 >   wasting nothing.
->   Some people call this "following the light."Good people 
+>   Some people call this "following the light." Good people 
 >   teach others
 >   who have the potential to be good.
 >   Brains count for nothing

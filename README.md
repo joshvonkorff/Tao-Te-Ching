@@ -11,39 +11,39 @@ Then, the notebook uses OpenAI to answer the user's question, selecting the most
 
 The notebook gives the following answer:
 
-The ideal way to teach a student about machine learning is by following the principles outlined in the quote from the Tao Te Ching. The quote highlights the importance of practice, mastery, resourcefulness, and respect for both teachers and students.
-
-Machine learning requires a significant amount of practice and hands-on experience. By emphasizing the need for practice, the quote suggests that the ideal way to teach a student about machine learning is by providing them with ample opportunities to work on real-world problems, experiment with different algorithms, and gain practical experience. This hands-on approach will allow the student to develop the skills necessary to understand and apply machine learning concepts effectively.
-
-Additionally, the quote emphasizes the importance of mastery and resourcefulness. Teaching machine learning involves guiding students to become masters of the subject, enabling them to tackle complex problems effortlessly. By encouraging students to develop a deep understanding of the underlying principles and techniques, they will be able to "do complicated math problems in [their] head" and build solutions that are innovative and efficient.
-
-Furthermore, the quote highlights the significance of respecting teachers and honoring the potential in others. In the context of teaching machine learning, this suggests that instructors should treat their students with patience, understanding, and inclusivity. They should be available to help everyone, regardless of their background or level of expertise. By fostering an environment that values respect and collaboration, students will feel encouraged to explore, learn from their peers, and reach their full potential.
-
-In summary, the ideal way to teach a student about machine learning is to provide them with ample opportunities for hands-on practice, guide them towards mastery and resourcefulness, and create a respectful and inclusive learning environment. This approach aligns with the principles outlined in the Tao Te Ching quote, emphasizing the importance of practice, mastery, resourcefulness, respect for teachers, and recognizing the potential in others.
+> The ideal way to teach a student about machine learning is by following the principles outlined in the quote from the Tao Te Ching. The quote highlights the importance of practice, mastery, resourcefulness, and respect for both teachers and students.
+> 
+> Machine learning requires a significant amount of practice and hands-on experience. By emphasizing the need for practice, the quote suggests that the ideal way to teach a student about machine learning is by providing them with ample opportunities to work on real-world problems, experiment with different algorithms, and gain practical experience. This hands-on approach will allow the student to develop the skills necessary to understand and apply machine learning concepts effectively.
+> 
+> Additionally, the quote emphasizes the importance of mastery and resourcefulness. Teaching machine learning involves guiding students to become masters of the subject, enabling them to tackle complex problems effortlessly. By encouraging students to develop a deep understanding of the underlying principles and techniques, they will be able to "do complicated math problems in [their] head" and build solutions that are innovative and efficient.
+> 
+> Furthermore, the quote highlights the significance of respecting teachers and honoring the potential in others. In the context of teaching machine learning, this suggests that instructors should treat their students with patience, understanding, and inclusivity. They should be available to help everyone, regardless of their background or level of expertise. By fostering an environment that values respect and collaboration, students will feel encouraged to explore, learn from their peers, and reach their full potential.
+> 
+> In summary, the ideal way to teach a student about machine learning is to provide them with ample opportunities for hands-on practice, guide them towards mastery and resourcefulness, and create a respectful and inclusive learning environment. This approach aligns with the principles outlined in the Tao Te Ching quote, emphasizing the importance of practice, mastery, resourcefulness, respect for teachers, and recognizing the potential in others.
 
 The passage from Hogan's translation is as follows:
 
-With enough 
-  practice,
-  you could walk without leaving any footprints.
-  Speak without stumbling over your words.
-  Do complicated math problems in your head.
-  You could build a door with no lock
-  that nobody could open.
-  You could tie something down with no knots, 
-  without even a rope,
-  and nobody could get it loose.Masters have 
-  time to help everybody,
-  and ignores nobody.
-  They uses their resources wisely,
-  wasting nothing.
-  Some people call this "following the light."Good people 
-  teach others
-  who have the potential to be good.
-  Brains count for nothing
-  if you fail to respect your teachers
-  or to honor the potential in others.
-  That's one of the most important lessons of Tao.
+> With enough
+>   practice,
+>    you could walk without leaving any footprints.
+>   Speak without stumbling over your words.
+>   Do complicated math problems in your head.
+>   You could build a door with no lock
+>   that nobody could open.
+>   You could tie something down with no knots, 
+>   without even a rope,
+>   and nobody could get it loose.Masters have 
+>   time to help everybody,
+>   and ignores nobody.
+>   They uses their resources wisely,
+>   wasting nothing.
+>   Some people call this "following the light."Good people 
+>   teach others
+>   who have the potential to be good.
+>   Brains count for nothing
+>   if you fail to respect your teachers
+>   or to honor the potential in others.
+>   That's one of the most important lessons of Tao.
 
 I learned how to query pinecone from Sinan Ozdemir's "Quick Start Guide to Large Language Models: Strategies and Best Practices for Using ChatGPT and Other LLMs"
 

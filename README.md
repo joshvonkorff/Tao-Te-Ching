@@ -1,9 +1,13 @@
 # Tao Te Ching
-Using Retrieval Augmented Generation with pinecone
+Using Retrieval Augmented Generation with OpenAI and Pinecone
 
-In this project, I have used Pinecone and Retrieval Augmented Generation to query the Tao Te Ching in the context of a user-provided question.  For example, if the user asked "What is the ideal way to teach a student about machine learning?", the notebook would first store the Tao Te Ching as 81 separate documents in Pinecone, which is a popular vector database.  (You need to provide a Pinecone API key to make this work.)  The idea of a vector database is that it stores embedding vectors for different objects, such as blocks of text - this allows us to locate the most relevant block of text to any query, e.g. using cosine similarity.
+In this project, I have used Pinecone and Retrieval Augmented Generation to query the Tao Te Ching in the context of a user-provided question.  For example, if the user asked "Do students learn better by reading books or by performing homework exercises?", the notebook would first store the Tao Te Ching as 81 separate documents in Pinecone, which is a popular vector database.
 
-The translation used for the Tao Te Ching belongs to Ron Hogan, which has a Creative Commons license:
+You will need to provide your own Pinecone API key as well as an OpenAI API key to make this work.  I assume a free starter environment, which allows for a single index only; but you can easily change to another environment.
+
+The idea of a vector database is that it stores embedding vectors for different objects, such as blocks of text - this allows us to locate the most relevant block of text to any query, e.g. using cosine similarity.
+
+The translation used for the Tao Te Ching belongs to Wikisources:
 
 http://www.beatrice.com/TAO.txt
 
@@ -11,42 +15,23 @@ Then, the notebook uses OpenAI to answer the user's question, selecting the most
 
 The notebook gives the following answer:
 
-> The ideal way to teach a student about machine learning is by following the principles outlined in the quote from the Tao Te Ching. The quote highlights the importance of practice, mastery, resourcefulness, and respect for both teachers and students.
-> 
-> Machine learning requires a significant amount of practice and hands-on experience. By emphasizing the need for practice, the quote suggests that the ideal way to teach a student about machine learning is by providing them with ample opportunities to work on real-world problems, experiment with different algorithms, and gain practical experience. This hands-on approach will allow the student to develop the skills necessary to understand and apply machine learning concepts effectively.
-> 
-> Additionally, the quote emphasizes the importance of mastery and resourcefulness. Teaching machine learning involves guiding students to become masters of the subject, enabling them to tackle complex problems effortlessly. By encouraging students to develop a deep understanding of the underlying principles and techniques, they will be able to "do complicated math problems in [their] head" and build solutions that are innovative and efficient.
-> 
-> Furthermore, the quote highlights the significance of respecting teachers and honoring the potential in others. In the context of teaching machine learning, this suggests that instructors should treat their students with patience, understanding, and inclusivity. They should be available to help everyone, regardless of their background or level of expertise. By fostering an environment that values respect and collaboration, students will feel encouraged to explore, learn from their peers, and reach their full potential.
-> 
-> In summary, the ideal way to teach a student about machine learning is to provide them with ample opportunities for hands-on practice, guide them towards mastery and resourcefulness, and create a respectful and inclusive learning environment. This approach aligns with the principles outlined in the Tao Te Ching quote, emphasizing the importance of practice, mastery, resourcefulness, respect for teachers, and recognizing the potential in others.
+> According to the quote from the Tao Te Ching, students may learn better by performing homework exercises rather than just reading books. The quote emphasizes the importance of practice and taking action. It suggests that through practice (in this case, doing homework exercises), there is always something to gain, implying that active engagement with the material leads to growth and learning. On the other hand, the quote implies that those who are preoccupied (potentially with just reading books) cannot master the universe (representing knowledge or understanding).
+> In applying this to the question at hand, students may benefit more from performing homework exercises rather than solely relying on reading books. While reading books can provide valuable information, it is through practical application, such as doing exercises and actively engaging with the content, that students can truly deepen their understanding and consolidate their knowledge. By taking action and putting the learned concepts into practice, students are more likely to retain the information, develop critical thinking skills, and gain a better understanding of how to apply the knowledge in real-world situations.
 
-The passage from Hogan's translation is as follows:
+The passage from Wikisource's translation is as follows:
 
-> With enough
->   practice,
->    you could walk without leaving any footprints.
->   Speak without stumbling over your words.
->   Do complicated math problems in your head.
->   You could build a door with no lock
->   that nobody could open.
->   You could tie something down with no knots, 
->   without even a rope,
->   and nobody could get it loose.Masters have 
->   time to help everybody,
->   and ignores nobody.
->   They uses their resources wisely,
->   wasting nothing.
->   Some people call this "following the light." Good people 
->   teach others
->   who have the potential to be good.
->   Brains count for nothing
->   if you fail to respect your teachers
->   or to honor the potential in others.
->   That's one of the most important lessons of Tao.
+> 49. Practicing scholarships, everyday there is something to gain,
+> Practicing the Dao, everyday there is something to lose;
+> When you lose all that can be lost,
+> You may be without action.
+> Act not and leave none to be acted upon!
+> Therefore those who can master the universe,
+> Often remain unoccupied;
+> Those who are preoccupied,
+> Cannot master the universe.
 
-I learned how to query pinecone from Sinan Ozdemir's "Quick Start Guide to Large Language Models: Strategies and Best Practices for Using ChatGPT and Other LLMs"
+The approach for querying Pinecone is based on the instructions in Sinan Ozdemir's "Quick Start Guide to Large Language Models: Strategies and Best Practices for Using ChatGPT and Other LLMs"  (Chapter 2).
 
-The idea to extend this to RAG is my own.  An example paper about RAG is: https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html
+In chapter 3, Ozdemir suggests RAG, though not by that name.  An example paper about RAG is: https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html
 
-Hogan's text is scraped from https://terebess.hu/english/tao/ron.html using Beautiful Soup.
+Wikisource is scraped from https://en.wikisource.org/wiki/Translation:Tao_Te_Ching using Beautiful Soup.

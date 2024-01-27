@@ -3,15 +3,19 @@ Using Retrieval Augmented Generation with OpenAI and Pinecone
 
 In this project, I have used Pinecone and Retrieval Augmented Generation to query the Tao Te Ching in the context of a user-provided question.  For example, if the user asked "Do students learn better by reading books or by performing homework exercises?", the notebook would first store the Tao Te Ching as 81 separate documents in Pinecone, which is a popular vector database.
 
-You will need to provide your own Pinecone API key as well as an OpenAI API key to make this work.  I assume a free starter environment, which allows for a single index only; but you can easily change to another environment.
+Pinecone stores the 81 documents and assigns an embedding vector to each - a vector that summarizes the meaning of each document as a set of about 1,500 numbers.  The idea is that if two documents have similar meaning, their vectors will be similar to one another.  Thus, "I played with my dog" and "I like being around my cat" would have very similar vectors because they are both about enjoying the company of pets.  In contrast, "I played with my dog" and "carrots are a vegetable" would have very different vectors.
 
-The idea of a vector database is that it stores embedding vectors for different objects, such as blocks of text - this allows us to locate the most relevant block of text to any query, e.g. using cosine similarity.
+You will need to provide your own Pinecone API key as well as an OpenAI API key to make this work.  I assume a free starter environment in Pinecone, which allows for a single index only; but you can easily change to a bigger environment.
+
+When the vector database stores embedding vectors for different objects, such as blocks of text, we can locate the most relevant block of text to any query, e.g. using cosine similarity.  Cosine similarity means that two vectors (1, 0.2, 0.5) and (0.3, 0.8, 0) would have their similarity calculated something like: 1 * 0.3 + 0.2 * 0.8 + 0.5 * 0.  (Only, with normalization.)
 
 The translation used for the Tao Te Ching belongs to Wikisources:
 
 https://en.wikisource.org/wiki/Translation:Tao_Te_Ching
 
 Then, the notebook uses OpenAI to answer the user's question, selecting the most relevant Tao Te Ching passage as context.  In this case, passage #27 is selected.
+
+The user has input the above question (which is not visible in the notebook) as to whether students learn better using book or homework exercises.
 
 The notebook gives the following answer:
 

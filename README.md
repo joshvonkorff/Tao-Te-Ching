@@ -1,11 +1,17 @@
 # Tao Te Ching
 Using Retrieval Augmented Generation with OpenAI and Pinecone
 
-In this project, I have used Pinecone and Retrieval Augmented Generation to query the Tao Te Ching in the context of a user-provided question.  For example, if the user asked "Do students learn better by reading books or by performing homework exercises?", the notebook would first store the Tao Te Ching as 81 separate documents in Pinecone, which is a popular vector database.
+In this project, I have used Pinecone and Retrieval Augmented Generation to query the Tao Te Ching in the context of a user-provided question.  For example, if the user asked "Do students learn better by reading books or by performing homework exercises?", the notebook would first store the Tao Te Ching as 81 separate documents in Pinecone, which is a popular vector database. (The Tao Te Ching is naturally divided into 81 sections.)  The notebook will then find the document (out of the 81) that is most similar to the user's question, and use it to answer the question.
 
-You will need to provide your own Pinecone API key as well as an OpenAI API key to make this work.  I assume a free starter environment, which allows for a single index only; but you can easily change to another environment.
+You will need to provide your own Pinecone API key as well as an OpenAI API key to make this work.  I assume a free starter environment for Pinecone, which allows for a single index only; but you can easily change to another environment.  (Each index is like a table in a SQL database.)
 
-The idea of a vector database is that it stores embedding vectors for different objects, such as blocks of text - this allows us to locate the most relevant block of text to any query, e.g. using cosine similarity.
+The idea of a vector database is that it stores embedding vectors for different objects, such as blocks of text - this allows us to locate the most relevant block of text to any query, e.g. using cosine similarity.  So if a user enters a query "Are bats a kind of bug?" it would be assigned a vector like (1, 0, 1) and the vector database would store a list of useful documents:
+
+"Bats are not bugs" (1, 0, 0.5)  
+"Baseball bats are made of wood" (1, 1, -1)  
+"Bugs bunny is a rabbit" (0, -1, 1)  
+
+The most relevant document is the one whose vector is most similar to (1, 0, 1).
 
 The translation used for the Tao Te Ching belongs to Wikisources:
 

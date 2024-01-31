@@ -5,9 +5,17 @@ In this project, I have used Pinecone and Retrieval Augmented Generation to quer
 
 Pinecone stores the 81 documents and assigns an embedding vector to each - a vector that summarizes the meaning of each document as a set of about 1,500 numbers.  The idea is that if two documents have similar meaning, their vectors will be similar to one another.  Thus, "I played with my dog" and "I like being around my cat" would have very similar vectors because they are both about enjoying the company of pets.  In contrast, "I played with my dog" and "carrots are a vegetable" would have very different vectors.
 
-You will need to provide your own Pinecone API key as well as an OpenAI API key to make this work.  I assume a free starter environment in Pinecone, which allows for a single index only; but you can easily change to a bigger environment.
+Thus, if the user asks "Are bats a kind of bug?", we might assign the vector (1.2, 0, -0.8).  (Pretending for a moment that 3 numbers are enough, when really it's more like 1,500.)  Then Pinecone finds the most similar document to help answer the question:
 
-When the vector database stores embedding vectors for different objects, such as blocks of text, we can locate the most relevant block of text to any query, e.g. using cosine similarity.  Cosine similarity means that two vectors (1, 0.2, 0.5) and (0.3, 0.8, 0) would have their similarity calculated something like: 1 * 0.3 + 0.2 * 0.8 + 0.5 * 0.  (Only, with normalization.)
+"Bats are not a kind of bug." (1.1, 0.1, -0.5)  
+"Bugs bunny is a kind of rabbit." (0.9, 0.8, -0.2)  
+"A baseball bat is made of wood." (-0.2, -1, -0.9)  
+
+In this toy example, the first is the most similar vector, so it is going to be used to answer the question.
+
+You will need to provide your own Pinecone API key as well as an OpenAI API key to make this work.  I assume a free starter environment in Pinecone, which allows for a single index only; but you can easily change to a bigger environment.  (A Pinecone index is like a table in SQL.)
+
+When the vector database stores embedding vectors for different objects, such as blocks of text, we can locate the most relevant block of text to any query, e.g. using cosine similarity.  Cosine similarity means that two vectors (1.2, 0, -0.8) and (1.1, 0.1, -0.5) would have their similarity calculated something like: 1.2 * 1.1 + 0 * 0.1 + (-0.8) * (-0.5).  (Only, with normalization.)
 
 The translation used for the Tao Te Ching belongs to Wikisources:
 

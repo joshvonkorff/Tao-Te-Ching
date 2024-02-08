@@ -21,16 +21,18 @@ The translation used for the Tao Te Ching belongs to Wikisources:
 
 https://en.wikisource.org/wiki/Translation:Tao_Te_Ching
 
-Then, the notebook uses OpenAI to answer the user's question, selecting the most relevant Tao Te Ching passage as context.  In this case, passage #27 is selected.
+Then, the notebook uses OpenAI to answer the user's question, selecting the most relevant Tao Te Ching passage as context.  In this case, passage #27 was selected.
 
-The user has input the above question (which is not visible in the notebook) as to whether students learn better using book or homework exercises.
+The user input the above question (which is not visible in the notebook) as to whether students learn better using book or homework exercises.
 
-The notebook gives the following answer:
+Note that this question and answer were used in the past.  They may change from time to time as I work with the code; the current version of the notebook may contain a different question and answer.
+
+At the time I asked the above question, the notebook gave the following answer:
 
 > According to the quote from the Tao Te Ching, students may learn better by performing homework exercises rather than just reading books. The quote emphasizes the importance of practice and taking action. It suggests that through practice (in this case, doing homework exercises), there is always something to gain, implying that active engagement with the material leads to growth and learning. On the other hand, the quote implies that those who are preoccupied (potentially with just reading books) cannot master the universe (representing knowledge or understanding).
 > In applying this to the question at hand, students may benefit more from performing homework exercises rather than solely relying on reading books. While reading books can provide valuable information, it is through practical application, such as doing exercises and actively engaging with the content, that students can truly deepen their understanding and consolidate their knowledge. By taking action and putting the learned concepts into practice, students are more likely to retain the information, develop critical thinking skills, and gain a better understanding of how to apply the knowledge in real-world situations.
 
-The passage from Wikisource's translation is as follows:
+The passage from Wikisource's translationw was as follows:
 
 > 49. Practicing scholarships, everyday there is something to gain,
 > Practicing the Dao, everyday there is something to lose;
